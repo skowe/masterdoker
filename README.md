@@ -1,2 +1,2 @@
 # masterdoker
-doker postavke prikazane u master radu
+Dockerfile datoteke i Docker compose postavke koriscene kroz master rad
