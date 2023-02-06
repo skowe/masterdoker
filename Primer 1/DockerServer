@@ -1,0 +1,10 @@
+#Koristi ubuntu:latest
+
+FROM golang:alpine
+
+#Instaliraj aplikaciju
+
+RUN go install github.com/skowe/masteraplikacije/dokerkomunikacija@latest
+
+#Dozvoli pristup preko porta 8080
+EXPOSE 8080 
