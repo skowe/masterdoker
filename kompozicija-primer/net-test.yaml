@@ -1,0 +1,20 @@
+networks:
+  mynet:
+    external: true
+
+services:
+  helloserver:
+    image: helloslika
+    environment:
+      - APP_PORT=3521
+    ports:
+      - 8080:3521
+    networks:
+      - mynet
+
+  requester:
+    image: rockylinux:9 
+    tty: true 
+    stdin_open: true
+    networks:
+      - mynet

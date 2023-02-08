@@ -5,5 +5,8 @@ FROM golang:alpine
 ENV APP_PORT=8080
 
 #Instaliraj aplikaciju
-RUN go install github.com/skowe/masteraplikacije/dokerkomunikacija@latest
+RUN GOBIN=$PWD go install github.com/skowe/helloweb@v1.0.0
+
+#Pokreni WEB aplikaciju kada se podigne kontejner
+ENTRYPOINT ./helloweb
 
